@@ -3,11 +3,10 @@
 #
 # [1] Two Sum
 #
-from typing import List
 
 # [2, 8, 3, 56, 12, 45]\n68
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+    def twoSum(self, nums, target):
         """
         My initial solution had a loop inside a loop -I believe that
         made its running time O(n^2)- to compare every number in the
@@ -26,6 +25,13 @@ class Solution:
 
         EDIT: using enumerate as seen in a comment for the top solution.
         Looks nicer and it's probably more efficient bc of less list lookups.
+
+        EDIT 2: fixed return type - List -> Tuple
+
+        EDIT 3: it might actually be faster without the typing lib or just
+        types altogether, let's see
+
+        EDIT 4: what the hell runtime went up, let me test this one sec
         """
         map = {}
         for i, num in enumerate(nums):

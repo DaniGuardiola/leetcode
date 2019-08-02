@@ -24,14 +24,6 @@ class Solution:
         removed it and it runs just fine now. Cool one.
 
         EDIT: using enumerate as seen in a comment for the top solution.
-        Looks nicer and it's probably more efficient bc of less list lookups.
-
-        EDIT 2: fixed return type - List -> Tuple
-
-        EDIT 3: it might actually be faster without the typing lib or just
-        types altogether, let's see
-
-        EDIT 4: what the hell runtime went up, let me test this one sec
         """
         map = {}
         for i, num in enumerate(nums):

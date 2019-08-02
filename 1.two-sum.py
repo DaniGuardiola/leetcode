@@ -23,12 +23,15 @@ class Solution:
 
         I tested it and it seemed to be broken because of the + 1, so I
         removed it and it runs just fine now. Cool one.
+
+        EDIT: using enumerate as seen in a comment for the top solution.
+        Looks nicer and it's probably more efficient bc of less list lookups.
         """
         map = {}
-        for i in range(len(nums)):
-            if nums[i] not in map:
-                map[target - nums[i]] = i
+        for i, num in enumerate(nums):
+            if num not in map:
+                map[target - num] = i
             else:
-                return map[nums[i]], i
+                return map[num], i
         return -i, -i
 
